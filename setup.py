@@ -8,7 +8,7 @@ __version__ = "0.0.0"
 
 REPO_NAME = "mlops_nlp_text_summarizer"
 AUTHOR_USER_NAME = "Nkifor"
-SRC_REPO = "mlops NLP Text Summarization"
+SRC_REPO = "mlops_NLP_Text_Summarization"
 AUTHOR_EMAIL = "stasiek3000@gmail.com"
 
 

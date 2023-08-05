@@ -1,0 +1,33 @@
+artifacts_root: artifacts
+
+rulesingestion:
+  data_ingestion_link_zipped:
+    type: link_zipped
+    source_URL_zipped: False #must bez not empty if data source is zipped link
+    root_dir: artifacts/data_ingestion
+    local_data_file: artifacts/data_ingestion/data.zip
+    unzip_dir: artifacts/data_ingestion
+    #choices: #dodaj ten atrybut z listą opcji
+    #  - option1
+    #  - option2
+    #  - option3
+  data_ingestion_link:
+    type: link
+    source_URL: False   #must bez not empty if data source is link
+    root_dir: artifacts/data_ingestion
+    local_data_file: artifacts/data_ingestion/data.zip
+    #choices:
+    #  - option4
+    #  - option5
+    #  - option6
+  data_ingestion_library_hugging_face_dataset:
+    type: library_huggingface_dataset
+    root_dir: artifacts/data_ingestion
+    library_dataset_name: samsum  #must bez not empty if data source is library dataset
+    library_dataset_version:
+    library_dataset_annotation:
+    local_data_dir: artifacts/data_ingestion/samsum
+    #choices:
+    #  - option7
+    #  - option8
+    #  - option9

@@ -1,17 +1,17 @@
 LICENSE
 README.md
 setup.py
-src/mlops NLP Text Summarization/__init__.py
-src/mlops NLP Text Summarization/components/__init__.py
-src/mlops NLP Text Summarization/config/__init__.py
-src/mlops NLP Text Summarization/config/configuration.py
-src/mlops NLP Text Summarization/constants/__init__.py
-src/mlops NLP Text Summarization/entity/__init__.py
-src/mlops NLP Text Summarization/logging/__init__.py
-src/mlops NLP Text Summarization/pipeline/__init__.py
-src/mlops NLP Text Summarization/utils/__init__.py
-src/mlops NLP Text Summarization/utils/common.py
+src/mlops_NLP_Text_Summarization/__init__.py
 src/mlops_NLP_Text_Summarization.egg-info/PKG-INFO
 src/mlops_NLP_Text_Summarization.egg-info/SOURCES.txt
 src/mlops_NLP_Text_Summarization.egg-info/dependency_links.txt
 src/mlops_NLP_Text_Summarization.egg-info/top_level.txt
+src/mlops_NLP_Text_Summarization/components/__init__.py
+src/mlops_NLP_Text_Summarization/config/__init__.py
+src/mlops_NLP_Text_Summarization/config/configuration.py
+src/mlops_NLP_Text_Summarization/constants/__init__.py
+src/mlops_NLP_Text_Summarization/entity/__init__.py
+src/mlops_NLP_Text_Summarization/logging/__init__.py
+src/mlops_NLP_Text_Summarization/pipeline/__init__.py
+src/mlops_NLP_Text_Summarization/utils/__init__.py
+src/mlops_NLP_Text_Summarization/utils/common.py

@@ -30,3 +30,9 @@ class DataValidationConfig:
     all_required_files_in_main_catalog: list
     library_dataset_name: str
     all_required_files_in_train_test_validations_catalogs: list
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path
+    data_path: Path
+    tokenizer_name: Path

@@ -66,15 +66,18 @@ class DataIngestionLibrary:
     def get_data_from_library(self):
         if not os.path.exists(self.config.local_data_dir):
             directory =  os.makedirs(self.config.local_data_dir, exist_ok=True)
+            directory_train = os.makedirs(self.config.local_data_dir + "/train", exist_ok=True)
+            directory_test = os.makedirs(self.config.local_data_dir + "/test", exist_ok=True)
+            directory_validation = os.makedirs(self.config.local_data_dir + "/validation", exist_ok=True)
             load_train = load_dataset("samsum", split ="train")
             df_load_train = pd.DataFrame(load_train)
-            df_load_train.to_csv(self.config.local_data_dir + "/train.csv")
+            df_load_train.to_csv(self.config.local_data_dir +  "/train/train.csv")
             load_test = load_dataset("samsum", split ="test")
             df_load_test = pd.DataFrame(load_test)
-            df_load_test.to_csv(self.config.local_data_dir + "/test.csv")
+            df_load_test.to_csv(self.config.local_data_dir + "/test/test.csv")
             load_validation = load_dataset("samsum", split ="validation")
             df_load_validation = pd.DataFrame(load_validation)
-            df_load_validation.to_csv(self.config.local_data_dir + "/validation.csv")
+            df_load_validation.to_csv(self.config.local_data_dir + "/validation/validation.csv")
 
             #dataset_test = load_dataset("samsum", split ="test").to_csv(self.config.local_data_dir/"test.csv"),
             #dataset_validation = load_dataset("samsum", split ="validation").to_csv(self.config.local_data_dir/"validation.csv")

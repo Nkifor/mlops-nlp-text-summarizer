@@ -340,3 +340,36 @@
 [2023-08-06 15:31:00,011: INFO: main: >>>>> Stage | Data Ingestion Stage | Finished 
 
  ========================================]
+[2023-08-06 15:31:28,436: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 15:31:28,438: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 15:31:28,440: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 16:50:22,070: INFO: utils: Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-08-06 16:50:22,070: INFO: utils: NumExpr defaulting to 8 threads.]
+[2023-08-06 16:50:23,034: INFO: main: >>>>> Stage | Data Ingestion Stage | Started]
+[2023-08-06 16:50:23,039: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 16:50:23,040: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 16:50:23,040: INFO: common: created directory at: artifacts]
+[2023-08-06 16:50:23,041: INFO: stage_01_data_ingestion: ConfigManager initialized: <mlops_NLP_Text_Summarization.config.configuration.ConfigurationManager object at 0x0000024F5FC35400>]
+[2023-08-06 16:50:23,042: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 16:50:23,042: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 16:50:23,043: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 16:50:23,043: INFO: stage_01_data_ingestion: Data ingestion type chosen: DataIngestionConfigLibrary(root_dir='artifacts/data_ingestion', local_data_dir='artifacts/data_ingestion/samsum', library_dataset_name='samsum')]
+[2023-08-06 16:50:23,044: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-06 16:50:23,044: INFO: stage_01_data_ingestion: Data ingestion type confirmed ]
+[2023-08-06 16:50:23,044: INFO: stage_01_data_ingestion: Data ingestion type configured in class DataIngestionLibrary:]
+[2023-08-06 16:50:32,459: INFO: data_ingestion:  Directory in path artifacts/data_ingestion/samsum was created from library! with following files: 
+ train.csv 
+  test.csv 
+ validation.csv ]
+[2023-08-06 16:50:32,464: INFO: stage_01_data_ingestion: Data ingestion performed]
+[2023-08-06 16:50:32,464: INFO: main: >>>>> Stage | Data Ingestion Stage | Finished 
+
+ ========================================]
+[2023-08-06 16:50:32,464: INFO: main: >>>>> Stage | Data Validation Stage | Started]
+[2023-08-06 16:50:32,469: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-06 16:50:32,470: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-06 16:50:32,471: INFO: common: created directory at: artifacts]
+[2023-08-06 16:50:32,472: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-06 16:50:32,475: INFO: main: >>>>> Stage | Data Validation Stage | Finished 
+
+ ========================================]

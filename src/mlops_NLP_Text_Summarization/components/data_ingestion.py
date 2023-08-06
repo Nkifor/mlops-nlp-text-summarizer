@@ -15,8 +15,6 @@ class DataIngestionUnzippedLink:
     def __init__(self, config: DataIngestionConfigUnzipLink):
         self.config = config
 
-
-
     def download_file(self):
         if not os.path.exists(self.config.local_data_file):
             filename, headers = request.urlretrieve(
@@ -26,8 +24,6 @@ class DataIngestionUnzippedLink:
             logger.info(f"{filename} download! with following info: \n{headers}")
         else:
             logger.info(f"File already exists of size: {get_size(Path(self.config.local_data_file))}")
-
-
 
     def extract_zip_file(self):
         """
@@ -44,8 +40,6 @@ class DataIngestionLink:
     def __init__(self, config: DataIngestionConfigLink):
         self.config = config
 
-
-
     def download_file(self):
         if not os.path.exists(self.config.local_data_file):
             filename, headers = request.urlretrieve(
@@ -60,8 +54,6 @@ class DataIngestionLink:
 class DataIngestionLibrary:
     def __init__(self, config: DataIngestionConfigLibrary):
         self.config = config
-
-
 
     def get_data_from_library(self):
         if not os.path.exists(self.config.local_data_dir):

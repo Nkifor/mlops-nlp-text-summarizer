@@ -22,3 +22,10 @@ class DataIngestionConfigLibrary:
     root_dir: Path
     local_data_dir: Path
     library_dataset_name: str
+
+@dataclass(frozen=True)
+class DataValidationConfig:
+    root_dir: Path
+    status_file: str
+    all_required_files: list
+    library_dataset_name: str

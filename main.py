@@ -1,3 +1,13 @@
+from mlops_NLP_Text_Summarization.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from mlops_NLP_Text_Summarization.logging import logger
 
-logger.info("Initial Logging")
+
+STAGE_NAME = "Data Ingestion Stage"
+try:
+    logger.info(f">>>>> Stage | {STAGE_NAME} | Started")
+    obj = DataIngestionTrainingPipeline()
+    obj.main()
+    logger.info(f">>>>> Stage | {STAGE_NAME} | Finished \n\n ========================================")
+except Exception as e:
+    logger.exception(f">>>>> Stage | {STAGE_NAME} | Failed")
+    raise e

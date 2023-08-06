@@ -3,6 +3,7 @@ import urllib.request as request
 import zipfile
 import pandas as pd
 from datasets import load_dataset
+import json
 from pathlib import Path
 from mlops_NLP_Text_Summarization.logging import logger
 from mlops_NLP_Text_Summarization.utils.common import get_size
@@ -57,23 +58,16 @@ class DataIngestionLibrary:
 
     def get_data_from_library(self):
         if not os.path.exists(self.config.local_data_dir):
-            directory =  os.makedirs(self.config.local_data_dir, exist_ok=True)
-            directory_train = os.makedirs(self.config.local_data_dir + "/train", exist_ok=True)
-            directory_test = os.makedirs(self.config.local_data_dir + "/test", exist_ok=True)
-            directory_validation = os.makedirs(self.config.local_data_dir + "/validation", exist_ok=True)
-            load_train = load_dataset("samsum", split ="train")
-            df_load_train = pd.DataFrame(load_train)
-            df_load_train.to_csv(self.config.local_data_dir +  "/train/train.csv")
-            load_test = load_dataset("samsum", split ="test")
-            df_load_test = pd.DataFrame(load_test)
-            df_load_test.to_csv(self.config.local_data_dir + "/test/test.csv")
-            load_validation = load_dataset("samsum", split ="validation")
-            df_load_validation = pd.DataFrame(load_validation)
-            df_load_validation.to_csv(self.config.local_data_dir + "/validation/validation.csv")
-
-            #dataset_test = load_dataset("samsum", split ="test").to_csv(self.config.local_data_dir/"test.csv"),
-            #dataset_validation = load_dataset("samsum", split ="validation").to_csv(self.config.local_data_dir/"validation.csv")
-
-            logger.info(f" Directory in path {self.config.local_data_dir} was created from library! with following files: \n train.csv \n  test.csv \n validation.csv ")
+            os.makedirs(self.config.local_data_dir, exist_ok=True)
+            dataset = load_dataset('samsum')
+            dataset.save_to_disk(self.config.local_data_dir)
+            for split in ['train', 'test', 'validation']:
+                os.makedirs(self.config.local_data_dir + f"/{split}", exist_ok=True)
+                dataset[split].to_csv(self.config.local_data_dir + f"/{split}/{split}.csv")
+            train_json = dataset['train'].to_json(self.config.local_data_dir  + "/train.json")
+            test_json= dataset['test'].to_json(self.config.local_data_dir + "/test.json")
+            validation_json= dataset['validation'].to_json(self.config.local_data_dir  + "/validation.json")
+            with open(self.config.local_data_dir + '/dataset_dict.json', 'w') as f:
+                json.dump({'train': train_json, 'test': test_json, 'validation': validation_json}, f)
         else:
             logger.info(f"Folder already exists of size: {get_size(Path(self.config.local_data_dir))}")

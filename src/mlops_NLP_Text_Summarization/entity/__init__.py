@@ -27,5 +27,6 @@ class DataIngestionConfigLibrary:
 class DataValidationConfig:
     root_dir: Path
     status_file: str
-    all_required_files: list
+    all_required_files_in_main_catalog: list
     library_dataset_name: str
+    all_required_files_in_train_test_validations_catalogs: list

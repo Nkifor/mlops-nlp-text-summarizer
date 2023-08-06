@@ -25,6 +25,13 @@ rulesingestion:
 data_validation:
   root_dir: artifacts/data_validation
   status_file: artifacts/data_validation/status.txt
-  all_required_files: ["train", "test", "validation"]
+  all_required_files_in_main_catalog: ["train", "test", "validation", "dataset_dict.json", "test.json", "train.json", "validation.json"]
   library_dataset_name : *dataset_name
+  all_required_files_in_train_test_validations_catalogs: ["dataset_info.json"]
+
+data_transformation:
+  root_dir: artifacts/data_transformation
+  data_path: artifacts/data_ingestion/samsum
+  tokenizer_name: google/pegasus-cnn_dailymail
+
 

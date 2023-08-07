@@ -10,6 +10,7 @@ src/mlops_NLP_Text_Summarization/components/__init__.py
 src/mlops_NLP_Text_Summarization/components/data_ingestion.py
 src/mlops_NLP_Text_Summarization/components/data_transformation.py
 src/mlops_NLP_Text_Summarization/components/data_validation.py
+src/mlops_NLP_Text_Summarization/components/model_training.py
 src/mlops_NLP_Text_Summarization/config/__init__.py
 src/mlops_NLP_Text_Summarization/config/configuration.py
 src/mlops_NLP_Text_Summarization/constants/__init__.py
@@ -19,5 +20,6 @@ src/mlops_NLP_Text_Summarization/pipeline/__init__.py
 src/mlops_NLP_Text_Summarization/pipeline/stage_01_data_ingestion.py
 src/mlops_NLP_Text_Summarization/pipeline/stage_02_data_validation.py
 src/mlops_NLP_Text_Summarization/pipeline/stage_03_data_transformation.py
+src/mlops_NLP_Text_Summarization/pipeline/stage_04_model_training.py
 src/mlops_NLP_Text_Summarization/utils/__init__.py
 src/mlops_NLP_Text_Summarization/utils/common.py

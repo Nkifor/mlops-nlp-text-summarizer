@@ -1078,3 +1078,198 @@ NameError: name 'json' is not defined
 [2023-08-07 00:09:28,800: INFO: common: yaml file: params.yaml loaded successfully]
 [2023-08-07 00:09:28,801: INFO: common: created directory at: artifacts]
 [2023-08-07 00:09:28,802: INFO: common: created directory at: artifacts/model_training]
+[2023-08-07 00:11:00,126: INFO: utils: Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-08-07 00:11:00,128: INFO: utils: NumExpr defaulting to 8 threads.]
+[2023-08-07 00:11:08,427: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 00:11:08,430: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 00:11:08,431: INFO: common: created directory at: artifacts]
+[2023-08-07 00:11:08,432: INFO: common: created directory at: artifacts/model_training]
+[2023-08-07 14:33:30,719: INFO: utils: Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-08-07 14:33:30,719: INFO: utils: NumExpr defaulting to 8 threads.]
+[2023-08-07 14:33:37,681: INFO: main: >>>>> Stage | Data Ingestion Stage | Started]
+[2023-08-07 14:33:37,681: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:33:37,698: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:33:37,699: INFO: common: created directory at: artifacts]
+[2023-08-07 14:33:37,699: INFO: stage_01_data_ingestion: ConfigManager initialized: <mlops_NLP_Text_Summarization.config.configuration.ConfigurationManager object at 0x00000220E2375400>]
+[2023-08-07 14:33:37,700: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:33:37,701: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:33:37,701: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:33:37,702: INFO: stage_01_data_ingestion: Data ingestion type chosen: DataIngestionConfigLibrary(root_dir='artifacts/data_ingestion', local_data_dir='artifacts/data_ingestion/samsum', library_dataset_name='samsum')]
+[2023-08-07 14:33:37,702: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:33:37,702: INFO: stage_01_data_ingestion: Data ingestion type confirmed ]
+[2023-08-07 14:33:37,703: INFO: stage_01_data_ingestion: Data ingestion type configured in class DataIngestionLibrary:]
+[2023-08-07 14:33:41,576: INFO: stage_01_data_ingestion: Data ingestion performed]
+[2023-08-07 14:33:41,576: INFO: main: >>>>> Stage | Data Ingestion Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:33:41,577: INFO: main: >>>>> Stage | Data Validation Stage | Started]
+[2023-08-07 14:33:41,583: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:33:41,586: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:33:41,586: INFO: common: created directory at: artifacts]
+[2023-08-07 14:33:41,587: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-07 14:33:41,594: INFO: main: >>>>> Stage | Data Validation Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:33:41,594: INFO: main: >>>>> Stage | Data Transformation Stage | Started]
+[2023-08-07 14:33:41,601: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:33:41,604: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:33:41,604: INFO: common: created directory at: artifacts]
+[2023-08-07 14:33:41,605: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-07 14:33:44,928: INFO: main: >>>>> Stage | Data Transformation Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:33:44,929: INFO: main: >>>>> Stage | Model Training Stage | Started]
+[2023-08-07 14:33:44,936: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:33:44,938: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:33:44,938: INFO: common: created directory at: artifacts]
+[2023-08-07 14:33:44,939: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-07 14:33:44,939: ERROR: main: >>>>> Stage | Model Training Stage | Failed]
+Traceback (most recent call last):
+  File "main.py", line 42, in <module>
+    obj.main()
+  File "c:\edu\python\mlops_projects\mlops_nlp_summarizer\src\mlops_NLP_Text_Summarization\pipeline\stage_04_model_training.py", line 14, in main
+    model_trainer_config.train()
+  File "c:\edu\python\mlops_projects\mlops_nlp_summarizer\src\mlops_NLP_Text_Summarization\components\model_training.py", line 19, in train
+    tokenizer = AutoTokenizer.from_pretrained(self.config.model_ckpt)
+AttributeError: 'DataTransformationConfig' object has no attribute 'model_ckpt'
+[2023-08-07 14:44:56,232: INFO: utils: Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-08-07 14:44:56,232: INFO: utils: NumExpr defaulting to 8 threads.]
+[2023-08-07 14:45:03,005: INFO: main: >>>>> Stage | Data Ingestion Stage | Started]
+[2023-08-07 14:45:03,022: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:45:03,024: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:45:03,024: INFO: common: created directory at: artifacts]
+[2023-08-07 14:45:03,025: INFO: stage_01_data_ingestion: ConfigManager initialized: <mlops_NLP_Text_Summarization.config.configuration.ConfigurationManager object at 0x000001FDB0855400>]
+[2023-08-07 14:45:03,026: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:45:03,026: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:45:03,027: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:45:03,027: INFO: stage_01_data_ingestion: Data ingestion type chosen: DataIngestionConfigLibrary(root_dir='artifacts/data_ingestion', local_data_dir='artifacts/data_ingestion/samsum', library_dataset_name='samsum')]
+[2023-08-07 14:45:03,028: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:45:03,028: INFO: stage_01_data_ingestion: Data ingestion type confirmed ]
+[2023-08-07 14:45:03,028: INFO: stage_01_data_ingestion: Data ingestion type configured in class DataIngestionLibrary:]
+[2023-08-07 14:45:06,463: INFO: stage_01_data_ingestion: Data ingestion performed]
+[2023-08-07 14:45:06,463: INFO: main: >>>>> Stage | Data Ingestion Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:45:06,464: INFO: main: >>>>> Stage | Data Validation Stage | Started]
+[2023-08-07 14:45:06,471: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:45:06,473: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:45:06,474: INFO: common: created directory at: artifacts]
+[2023-08-07 14:45:06,474: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-07 14:45:06,481: INFO: main: >>>>> Stage | Data Validation Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:45:06,481: INFO: main: >>>>> Stage | Data Transformation Stage | Started]
+[2023-08-07 14:45:06,487: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:45:06,490: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:45:06,491: INFO: common: created directory at: artifacts]
+[2023-08-07 14:45:06,492: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-07 14:45:09,457: INFO: main: >>>>> Stage | Data Transformation Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:45:09,457: INFO: main: >>>>> Stage | Model Training Stage | Started]
+[2023-08-07 14:45:09,464: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:45:09,466: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:45:09,466: INFO: common: created directory at: artifacts]
+[2023-08-07 14:45:09,467: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-07 14:45:09,467: ERROR: main: >>>>> Stage | Model Training Stage | Failed]
+Traceback (most recent call last):
+  File "main.py", line 42, in <module>
+    obj.main()
+  File "c:\edu\python\mlops_projects\mlops_nlp_summarizer\src\mlops_NLP_Text_Summarization\pipeline\stage_04_model_training.py", line 14, in main
+    model_trainer_config.train()
+  File "c:\edu\python\mlops_projects\mlops_nlp_summarizer\src\mlops_NLP_Text_Summarization\components\model_training.py", line 19, in train
+    tokenizer = AutoTokenizer.from_pretrained(self.config.model_ckpt)
+AttributeError: 'DataTransformationConfig' object has no attribute 'model_ckpt'
+[2023-08-07 14:47:29,869: INFO: utils: Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-08-07 14:47:29,869: INFO: utils: NumExpr defaulting to 8 threads.]
+[2023-08-07 14:47:36,644: INFO: main: >>>>> Stage | Data Ingestion Stage | Started]
+[2023-08-07 14:47:36,659: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:47:36,666: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:47:36,667: INFO: common: created directory at: artifacts]
+[2023-08-07 14:47:36,667: INFO: stage_01_data_ingestion: ConfigManager initialized: <mlops_NLP_Text_Summarization.config.configuration.ConfigurationManager object at 0x000001CA98D85400>]
+[2023-08-07 14:47:36,668: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:47:36,669: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:47:36,669: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:47:36,670: INFO: stage_01_data_ingestion: Data ingestion type chosen: DataIngestionConfigLibrary(root_dir='artifacts/data_ingestion', local_data_dir='artifacts/data_ingestion/samsum', library_dataset_name='samsum')]
+[2023-08-07 14:47:36,670: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 14:47:36,670: INFO: stage_01_data_ingestion: Data ingestion type confirmed ]
+[2023-08-07 14:47:36,670: INFO: stage_01_data_ingestion: Data ingestion type configured in class DataIngestionLibrary:]
+[2023-08-07 14:47:40,003: INFO: stage_01_data_ingestion: Data ingestion performed]
+[2023-08-07 14:47:40,004: INFO: main: >>>>> Stage | Data Ingestion Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:47:40,004: INFO: main: >>>>> Stage | Data Validation Stage | Started]
+[2023-08-07 14:47:40,011: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:47:40,013: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:47:40,014: INFO: common: created directory at: artifacts]
+[2023-08-07 14:47:40,015: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-07 14:47:40,022: INFO: main: >>>>> Stage | Data Validation Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:47:40,022: INFO: main: >>>>> Stage | Data Transformation Stage | Started]
+[2023-08-07 14:47:40,028: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:47:40,031: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:47:40,031: INFO: common: created directory at: artifacts]
+[2023-08-07 14:47:40,032: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-07 14:47:42,983: INFO: main: >>>>> Stage | Data Transformation Stage | Finished 
+
+ ========================================]
+[2023-08-07 14:47:42,984: INFO: main: >>>>> Stage | Model Training Stage | Started]
+[2023-08-07 14:47:42,990: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 14:47:42,993: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 14:47:42,993: INFO: common: created directory at: artifacts]
+[2023-08-07 14:47:42,994: INFO: common: created directory at: artifacts/model_training]
+[2023-08-07 15:00:44,781: INFO: utils: Note: NumExpr detected 24 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.]
+[2023-08-07 15:00:44,781: INFO: utils: NumExpr defaulting to 8 threads.]
+[2023-08-07 15:00:51,533: INFO: main: >>>>> Stage | Data Ingestion Stage | Started]
+[2023-08-07 15:00:51,533: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 15:00:51,548: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 15:00:51,549: INFO: common: created directory at: artifacts]
+[2023-08-07 15:00:51,549: INFO: stage_01_data_ingestion: ConfigManager initialized: <mlops_NLP_Text_Summarization.config.configuration.ConfigurationManager object at 0x00000167ACD85400>]
+[2023-08-07 15:00:51,550: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 15:00:51,550: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 15:00:51,550: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 15:00:51,551: INFO: stage_01_data_ingestion: Data ingestion type chosen: DataIngestionConfigLibrary(root_dir='artifacts/data_ingestion', local_data_dir='artifacts/data_ingestion/samsum', library_dataset_name='samsum')]
+[2023-08-07 15:00:51,551: INFO: common: created directory at: artifacts/data_ingestion]
+[2023-08-07 15:00:51,551: INFO: stage_01_data_ingestion: Data ingestion type confirmed ]
+[2023-08-07 15:00:51,552: INFO: stage_01_data_ingestion: Data ingestion type configured in class DataIngestionLibrary:]
+[2023-08-07 15:00:55,060: INFO: stage_01_data_ingestion: Data ingestion performed]
+[2023-08-07 15:00:55,061: INFO: main: >>>>> Stage | Data Ingestion Stage | Finished 
+
+ ========================================]
+[2023-08-07 15:00:55,061: INFO: main: >>>>> Stage | Data Validation Stage | Started]
+[2023-08-07 15:00:55,067: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 15:00:55,070: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 15:00:55,070: INFO: common: created directory at: artifacts]
+[2023-08-07 15:00:55,071: INFO: common: created directory at: artifacts/data_validation]
+[2023-08-07 15:00:55,078: INFO: main: >>>>> Stage | Data Validation Stage | Finished 
+
+ ========================================]
+[2023-08-07 15:00:55,078: INFO: main: >>>>> Stage | Data Transformation Stage | Started]
+[2023-08-07 15:00:55,085: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 15:00:55,087: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 15:00:55,088: INFO: common: created directory at: artifacts]
+[2023-08-07 15:00:55,089: INFO: common: created directory at: artifacts/data_transformation]
+[2023-08-07 15:00:58,149: INFO: main: >>>>> Stage | Data Transformation Stage | Finished 
+
+ ========================================]
+[2023-08-07 15:00:58,150: INFO: main: >>>>> Stage | Model Training Stage | Started]
+[2023-08-07 15:00:58,156: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2023-08-07 15:00:58,158: INFO: common: yaml file: params.yaml loaded successfully]
+[2023-08-07 15:00:58,158: INFO: common: created directory at: artifacts]
+[2023-08-07 15:00:58,159: INFO: common: created directory at: artifacts/model_training]
+[2023-08-07 19:27:24,109: INFO: main: >>>>> Stage | Model Training Stage | Finished 
+
+ ========================================]
+[2023-08-07 20:32:46,004: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:24:13,838: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:27:19,502: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:28:43,625: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:30:16,211: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:52:24,922: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:54:00,534: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:54:31,644: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:54:41,707: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:55:12,766: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 21:55:21,207: INFO: common: yaml file: secrets.yaml loaded successfully]
+[2023-08-07 22:09:12,075: INFO: common: yaml file: secrets.yaml loaded successfully]

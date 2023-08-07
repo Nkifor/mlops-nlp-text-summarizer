@@ -28,3 +28,29 @@
 9. Update the dvc.yaml
 
 
+
+
+## How to run
+
+### STEPS:
+
+Clone the repository
+
+```bash
+https://github.com/Nkifor/mlops-nlp-text-summarizer
+```
+### STEP 01- Create a conda environment after opening the repository
+
+```bash
+conda create -n venvml python=3.8 -y
+```
+
+```bash
+conda activate venvml
+```
+
+### STEP 02 - install the requirements
+```bash
+pip install -r requirements.txt
+```
+

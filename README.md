@@ -3,6 +3,15 @@
 
 
 ## Description and shortened context of the training data
+Project assumes to perform text summarizing task by apply
+- data ingestion
+- validation
+- transformation
+- training
+- evaluation
+- After all above proper log deploy model to mlflow and // - bug under solution
+- finally serve via API
+
 
 
 ## Stages of the project
@@ -25,7 +34,7 @@
 6. Update the components
 7. Update the pipeline
 8. Update the main.py
-9. Update the dvc.yaml
+
 
 
 
@@ -45,12 +54,13 @@ https://github.com/Nkifor/mlops-nlp-text-summarizer
 conda create -n venvml python=3.8 -y
 ```
 
-```bash
-conda activate venvml
-```
+
 
 ### STEP 02 - install the requirements
 ```bash
 pip install -r requirements.txt
 ```
+
+
+### STEP 03 - update setup and logic and create your own setup file and secrets.yaml
 

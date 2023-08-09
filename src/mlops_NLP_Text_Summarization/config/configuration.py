@@ -7,6 +7,7 @@ from mlops_NLP_Text_Summarization.entity import (DataIngestionConfigLibrary,
                                                  DataValidationConfig,
                                                  DataTransformationConfig,
                                                  ModelTrainingConfig,
+                                                ModelEvaluationConfig,
                                                                                                  )
 
 
@@ -128,19 +129,6 @@ class ConfigurationManager:
         )
 
         return model_training_config
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

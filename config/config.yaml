@@ -45,6 +45,7 @@ model_evaluation:
   model_path: artifacts/model_training/pegasus-samsum-model
   tokenizer_path: artifacts/model_training/tokenizer
   metric_file_name: artifacts/model_evaluation/metrics.json
-  experiment_name: pegasus-samsum-model-test
+  experiment_name: pegasus-samsum-model_test
+  model_path_packed: artifacts/model_evaluation/pegasus-samsum-model_test.joblib
 
 

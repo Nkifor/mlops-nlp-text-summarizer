@@ -52,3 +52,24 @@ class ModelTrainingConfig:
     eval_steps: int
     save_steps: float
     gradient_accumulation_steps: int
+
+
+@dataclass(frozen=True)
+class CredentialsConfig:
+    MLFLOW_TRACKING_URI: str
+    MLFLOW_TRACKING_USERNAME: str
+    MLFLOW_TRACKING_PASSWORD: str
+
+
+
+@dataclass(frozen=True)
+class ModelEvaluationConfig:
+    root_dir: Path
+    data_path: Path
+    model_path: Path
+    params: dict
+    tokenizer_path: Path
+    metric_file_name: Path
+    mlflow_uri: str
+    experiment_name: str
+    model_path_packed: Path

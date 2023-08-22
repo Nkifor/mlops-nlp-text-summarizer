@@ -47,5 +47,6 @@ model_evaluation:
   metric_file_name: artifacts/model_evaluation/metrics.json
   experiment_name: pegasus-samsum-model_test
   model_path_packed: artifacts/model_evaluation/pegasus-samsum-model_test.joblib
+  #headers: {"Content-Type": "application/json", "Authorization": f"Bearer {model_evaluation_config.dagsub_api_token}", "User-Agent": "MyApp/1.0", "Accept": "application/json"}
 
 

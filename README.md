@@ -18,6 +18,7 @@ Project assumes to perform text summarizing task by apply
 ![HuggingFace](https://img.shields.io/badge/huggingface-%23F37626.svg?style=for-the-badge&logo=huggingface&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/pytorch-%23EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white)
 ![MLflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
 
 
 

@@ -13,6 +13,24 @@ License-File: LICENSE
 
 
 ## Description and shortened context of the training data
+Project assumes to perform text summarizing task by apply
+- data ingestion
+- validation
+- transformation
+- training
+- evaluation
+- After all above proper log deploy model to mlflow and // - bug under solution
+- finally serve via API
+
+
+## Technologies used:
+
+![HuggingFace](https://img.shields.io/badge/huggingface-%23F37626.svg?style=for-the-badge&logo=huggingface&logoColor=white)
+![PyTorch](https://img.shields.io/badge/pytorch-%23EE4C2C.svg?style=for-the-badge&logo=pytorch&logoColor=white)
+![MLflow](https://img.shields.io/badge/mlflow-%23d9ead3.svg?style=for-the-badge&logo=numpy&logoColor=blue)
+![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
+
+
 
 
 ## Stages of the project
@@ -35,7 +53,7 @@ License-File: LICENSE
 6. Update the components
 7. Update the pipeline
 8. Update the main.py
-9. Update the dvc.yaml
+
 
 
 
@@ -55,12 +73,13 @@ https://github.com/Nkifor/mlops-nlp-text-summarizer
 conda create -n venvml python=3.8 -y
 ```
 
-```bash
-conda activate venvml
-```
+
 
 ### STEP 02 - install the requirements
 ```bash
 pip install -r requirements.txt
 ```
+
+
+### STEP 03 - update setup and logic and create your own setup file and secrets.yaml
 

@@ -15,12 +15,12 @@ class ConfigurationManager:
     def __init__(
         self,
         config_filepath = CONFIG_FILE_PATH,
-        secrets_filepath = SECRETS_FILE_PATH,
+        #secrets_filepath = SECRETS_FILE_PATH,
         params_filepath = PARAMS_FILE_PATH):
 
         self.config = read_yaml(config_filepath)
         self.params = read_yaml(params_filepath)
-        self.secrets = read_yaml(secrets_filepath)
+        #self.secrets = read_yaml(secrets_filepath)
 
         create_directories([self.config.artifacts_root])
 
@@ -138,7 +138,7 @@ class ConfigurationManager:
     def get_model_evaluation_config(self) -> ModelEvaluationConfig:
        config = self.config.model_evaluation
        params = self.params.TrainingArguments
-       secrets = self.secrets
+       #secrets = self.secrets
        create_directories([config.root_dir])
        model_evaluation_config = ModelEvaluationConfig(
            root_dir=config.root_dir,
@@ -147,7 +147,7 @@ class ConfigurationManager:
            tokenizer_path = config.tokenizer_path,
            params = params,
            metric_file_name = config.metric_file_name,
-           mlflow_uri = secrets.MLFLOW_TRACKING_URI,
+           #mlflow_uri = secrets.MLFLOW_TRACKING_URI,
            experiment_name=config.experiment_name,
            model_path_packed= config.model_path_packed,
 

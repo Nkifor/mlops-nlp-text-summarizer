@@ -70,6 +70,6 @@ class ModelEvaluationConfig:
     params: dict
     tokenizer_path: Path
     metric_file_name: Path
-    mlflow_uri: str
+    #mlflow_uri: str
     experiment_name: str
     model_path_packed: Path

@@ -22,7 +22,7 @@ ensure==1.0.2
 fastapi==0.78.0
 uvicorn==0.18.3
 Jinja2==3.1.2
-mlflow==2.5.0
+mlflow==2.9.0
 protobuf
 joblib
 -e .
